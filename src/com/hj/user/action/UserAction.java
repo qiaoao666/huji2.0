@@ -14,7 +14,7 @@ public class UserAction {
 	@RequestMapping("/addUser")
 	public String addUser(){
 		UserInfo userInfo = new UserInfo();
-		userInfo.setUserId("3");
+		userInfo.setUserId("5");
 		userInfo.setUserName("432");
 		userInfo.setUserPass("42432");
 		userService.addUser(userInfo);
