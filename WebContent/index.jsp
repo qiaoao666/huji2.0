@@ -30,7 +30,7 @@
     </ul>
     </div>
     </div>
-    <div class="loginbm">多喝水富含负胜负电话是否独U盾深度<a href="http://www.uimaker.com">uimaker.com</a>  仅供学习交流，勿用于任何商业用途</div>
+    <div class="loginbm">多喝大幅度是否能322<a href="http://www.uimaker.com">uimaker.com</a>  仅供学习交流，勿用于任何商业用途</div>
 	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
 </html>
