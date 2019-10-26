@@ -1,18 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hj.user.dao.UserDao">
+	<insert id="addUser" parameterType="UserInfo">
+		insert into cf_user (user_id,user_name,user_pass)
+		values(#{userId},#{userName},#{userPass});
+	</insert>
+	<resultMap id="addUser" type="UserInfo">
+		<id property="userId" column="user_id" />
+		<result property="userName" column="user_name" />
+		<result property="userPass" column="user_pass" />
+	</resultMap>
+</mapper>
+
+<!-- 
+<select id="getTeacher" parameterType="int" resultMap="getTeacherMap">
+	select * from teacher where t_id=#{id};
+</select>
+<resultMap type="Teacher" id="getTeacherMap">
+	<id property="id" column="t_id" />
+	<result property="name" column="t_name" />
+</resultMap>
+<select id="getStudent" parameterType="int" resultMap="getStudentMap">
+	select * from student where class_id=#{id};
+</select>
+<resultMap type="Student" id="getStudentMap">
+	<id property="id" column="s_id" />
+	<result property="name" column="s_name" />
+</resultMap>
+
+
 
 	<resultMap id="user" type="com.hj.user.po.UserInfo">
 		<result column="user_id" property="userId" jdbcType="VARCHAR" />
 		<result column="user_name" property="userName" jdbcType="VARCHAR" />
 		<result column="user_pass" property="userPass" jdbcType="VARCHAR" />
 	</resultMap>
-	
+
 	<insert id="addUser" parameterType="com.hj.user.po.UserInfo">
-		insert into cf_user (user_id,user_name,user_pass)
-		 values(#{userId,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},#{userPass,jdbcType=VARCHAR})
+		insert into cf_user
+		(user_id,user_name,user_pass)
+		values(#{userId,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},#{userPass,jdbcType=VARCHAR})
 	</insert>
-	
-	
-</mapper>
+
+	插入
+	<insert id="insertUser" parameterType="com.rjxy.shiyan3.User">
+		insert into users(id,name, age) values(#{id},#{name}, #{age});
+	</insert>
+	删除
+	<delete id="deleteUser" parameterType="int">
+		delete from users where id=#{id}
+	</delete>
+	修改
+	<update id="updateUser" parameterType="com.rjxy.shiyan3.User">
+		update users set name=#{name},age=#{age} where id=#{id}
+	</update>
+	查询
+	<select id="selectUser" parameterType="int" resultType="com.rjxy.shiyan3.User">
+		select *
+		from users where id=#{id} ;
+	</select>
+	查询全部
+	<select id="selectAllUsers" resultType="com.rjxy.shiyan3.User">
+		select * from users
+	</select>
+
+ -->

@@ -4,6 +4,16 @@ public class UserInfo {
 	private String userId;
 	private String userName;
 	private String userPass;
+	
+	public UserInfo(String userId, String userName, String userPass) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.userPass = userPass;
+	}
+	public UserInfo() {
+		super();
+	}
 	public String getUserId() {
 		return userId;
 	}
