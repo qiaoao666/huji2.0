@@ -15,41 +15,11 @@
 		<div class="main-layout-side">
 			<div class="m-logo"></div>
 			<ul class="layui-nav layui-nav-tree" lay-filter="leftNav">
-				<!-- layui-nav-itemed 基础说明 -->
 				<li class="layui-nav-item">
-					<a href="datasource/main.html" target="option"><i class="iconfont">&#xe60d;</i>公共数据源配置</a>
-				</li>
-				<!-- 标签说明 &#xe607;  -->
-				<li class="layui-nav-item"><a href="javascript:void(0);">
-					<i class="iconfont">&#xe607;</i>报表管理</a>
-					<dl class="layui-nav-child">
-						<dd>
-							<a href="javascript:void(0);" onclick="openUrl('resource/report/reportList.jsp')"><span class="l-line"></span>报表管理</a>
-						</dd>
-					</dl>
+					<a href="datasource/main.html" target="option"><i class="iconfont">&#xe60d;</i>用户管理</a>
 				</li>
 				<li class="layui-nav-item">
-					<a href="javascript:void(0);"><i class="iconfont">&#xe608;</i>模板展示</a>
-					<dl class="layui-nav-child">
-						<dd>
-							<a href="api/action/actiondefination.html" target="option"><span class="l-line"></span>档案目录</a>
-						</dd>
-						<dd>
-							<a href="api/action/drxmvcxmlintro.html" target="option"><span class="l-line"></span>档案盒封面</a>
-						</dd>
-						<dd>
-							<a href="api/action/actionmethod.html" target="option"><span class="l-line"></span>卷内备考表</a>
-						</dd>
-						<dd>
-							<a href="api/action/actionannotation.html" target="option"><span class="l-line"></span>档案盒脊背</a>
-						</dd>
-						<dd>
-							<a href="api/action/actionannotation.html" target="option"><span class="l-line"></span>档案借阅单</a>
-						</dd>
-						<dd>
-							<a href="api/action/actionannotation.html" target="option"><span class="l-line"></span>其他报表</a>
-						</dd>
-					</dl>
+					<a href="datasource/main.html" target="option"><i class="iconfont">&#xe60d;</i>户籍管理</a>
 				</li>
 				<li class="layui-nav-item"><a href="http://www.hx-soft.cn/"
 					target="_blank"><i class="iconfont">&#xe60c;</i>友情链接</a>
@@ -97,14 +67,10 @@
 				layer.msg(elem.text());
 			});
 		});
-	
 		var layer;
 		layui.use('layer', function() {
 			layer = layui.layer;
 		});
-		function openUrl(url){
-			window.mainFrame.src = url;
-		}
 	</script>
   </body>
 </html>
