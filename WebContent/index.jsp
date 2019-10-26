@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <title>登录</title>
+    <title>登录11</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body style="background-color:#1c77ac; background-image:url(images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
