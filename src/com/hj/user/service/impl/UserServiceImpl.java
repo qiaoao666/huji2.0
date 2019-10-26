@@ -1,18 +1,18 @@
 package com.hj.user.service.impl;
 
-import org.apache.ibatis.session.SqlSession;
-import org.junit.Test;
-
-import com.hj.base.util.SqlGetSessionUtil;
 import com.hj.user.po.UserInfo;
 import com.hj.user.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
 	@Override
-	public void addUser(UserInfo user) {
+	public boolean addUser(UserInfo user) {
 		// TODO Auto-generated method stub
-		
+		if(user.getUserName().length()>10 || user.getUserPass().length()<3){
+			return false;
+		}else{
+			return true;
+		}
 	}
 
 

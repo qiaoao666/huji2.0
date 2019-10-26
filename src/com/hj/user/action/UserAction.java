@@ -1,23 +1,27 @@
 package com.hj.user.action;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hj.user.dao.UserDao;
 import com.hj.user.po.UserInfo;
 import com.hj.user.service.UserService;
 import com.hj.user.service.impl.UserServiceImpl;
 
 @Controller
-@RequestMapping("/user1")
+@RequestMapping("/user")
 public class UserAction {
-	private UserService userService = new UserServiceImpl();
+	@Autowired
+	private UserService userService;
 	@RequestMapping("/addUser")
-	public String addUser(){
-		UserInfo userInfo = new UserInfo();
-		userInfo.setUserId("5");
-		userInfo.setUserName("432");
-		userInfo.setUserPass("42432");
-		userService.addUser(userInfo);
+	public String addUser(@ModelAttribute UserInfo user){
+		if(userService.addUser(user)){
+			UserDao u = new UserDao();
+			u.addUser();
+		}
+
 		return "/user/MyJsp";
 	}
 	
