@@ -29,7 +29,7 @@
 			async:true,
 			success: function (result) {
 				//console.log(result);//在控制台输出
-				alert(result);
+				alert(decodeURIComponent(result));
 				//window.location.href = "login/main";
 			},
 			error:function (result) {
