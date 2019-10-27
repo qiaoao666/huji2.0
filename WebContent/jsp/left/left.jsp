@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=GB18030"
-    pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,14 +9,14 @@
 <body>
 	<div class="left abc">
 	          <ul>
-	              <li><a href="../right/hujiAdd.jsp" target="right">»§¼®Ìí¼Ó</a></li><br>
-	              <li><a href="../right/hujiManage.jsp" target="right">»§¼®¹ÜÀí</a></li><br>
-	              <li><a href="../right/moveInAdd.jsp" target="right">Ç¨ÈëÌí¼Ó</a></li><br>
-	              <li><a href="../right/moveInManage.jsp" target="right">Ç¨Èë¹ÜÀí</a></li><br>
-	              <li><a href="../right/moveOutAdd.jsp" target="right">Ç¨³öÌí¼Ó</a></li><br>
-	              <li><a href="../right/moveOutManage.jsp" target="right">Ç¨³ö¹ÜÀí</a></li><br>
-	              <li><a href="../right/feedback.jsp" target="right">·´À¡Í¶Ëß</a></li><br>
-	              <li><a href="../right/managerAdd.jsp" target="right">¹ÜÀíÔ±Ìí¼Ó</a></li><br>
+	              <li><a href="../right/hujiAdd.jsp" target="right">æˆ·ç±æ·»åŠ </a></li><br>
+	              <li><a href="../right/hujiManage.jsp" target="right">æˆ·ç±ç®¡ç†</a></li><br>
+	              <li><a href="../right/moveInAdd.jsp" target="right">è¿å…¥æ·»åŠ </a></li><br>
+	              <li><a href="../right/moveInManage.jsp" target="right">è¿å…¥ç®¡ç†</a></li><br>
+	              <li><a href="../right/moveOutAdd.jsp" target="right">è¿å‡ºæ·»åŠ </a></li><br>
+	              <li><a href="../right/moveOutManage.jsp" target="right">è¿å‡ºç®¡ç†</a></li><br>
+	              <li><a href="../right/feedback.jsp" target="right">åé¦ˆæŠ•è¯‰</a></li><br>
+	              <li><a href="../right/managerAdd.jsp" target="right">ç®¡ç†å‘˜æ·»åŠ </a></li><br>
 	          </ul>
 	      </div>
 </body>

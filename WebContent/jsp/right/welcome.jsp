@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=GB18030"
-    pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -11,6 +11,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>欢迎来到户籍管理系统</h2>
+	<h2>娆㈣繋鏉ュ埌鎴风睄绠＄悊绯荤粺</h2>
 </body>
 </html>
