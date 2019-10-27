@@ -1,20 +1,20 @@
-ï»¿/*åœ†è§’*/
-/*é˜´å½±*/
-/*å­—ä½“*/
-/*åŠ¨ç”»å±æ€§*/
-/*æ¸…æ¥šæµ®åŠ¨*/
-/*2.1 æ …æ ¼ç³»ç»Ÿ
+/*Ô²½Ç*/
+/*ÒõÓ°*/
+/*×ÖÌå*/
+/*¶¯»­ÊôĞÔ*/
+/*Çå³ş¸¡¶¯*/
+/*2.1 Õ¤¸ñÏµÍ³
     Name:           style_span
     Example:
     <div class="responsive">
     <div class="row cl" role="grid">
-      <div class="col-1">â€¦â€¦</div>
-      â€¦â€¦
+      <div class="col-1">¡­¡­</div>
+      ¡­¡­
     </div>
     </div>
-    Explain:        æ …æ ¼ç³»ç»Ÿ
+    Explain:        Õ¤¸ñÏµÍ³
 */
-/*2.1 å“åº”å¼æ …æ ¼ç³»ç»Ÿ*/
+/*2.1 ÏìÓ¦Ê½Õ¤¸ñÏµÍ³*/
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -291,7 +291,7 @@
   right: 91.66667%;
   left: auto;
 }
-/*å±€éƒ¨æ¨¡å—å¹³åˆ†*/
+/*¾Ö²¿Ä£¿éÆ½·Ö*/
 .col-1-1 {
   width: 100%;
 }
@@ -1013,9 +1013,9 @@
     margin-left: 0;
   }
 }
-/*2.2 å“åº”å¼éšè—æ˜¾ç¤º
+/*2.2 ÏìÓ¦Ê½Òş²ØÏÔÊ¾
     Name:           style_Layout
-    Explain:        å·¦å³ä¸¤æ |å·¦ä¸­å³ä¸‰æ |ä¸Šä¸­ä¸‹
+    Explain:        ×óÓÒÁ½À¸|×óÖĞÓÒÈıÀ¸|ÉÏÖĞÏÂ
     Last Modify:    guojunhui
 */
 .visible-xs,
@@ -1193,18 +1193,18 @@
   font-size: 14px;
   font-weight: 700;
 }
-/*é¢æ¿æ ‡é¢˜*/
+/*Ãæ°å±êÌâ*/
 .panel-body {
   padding: 15px;
 }
-/*é¢æ¿å†…å®¹*/
+/*Ãæ°åÄÚÈİ*/
 .panel-footer {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   padding: 5px 20px;
 }
-/*é¢æ¿é¡µè„š*/
-/*é»˜è®¤é¢æ¿*/
+/*Ãæ°åÒ³½Å*/
+/*Ä¬ÈÏÃæ°å*/
 .panel-default {
   border-color: #dddddd;
 }
@@ -1213,7 +1213,7 @@
   background-color: #f5f5f5;
   color: #444444;
 }
-/*ä¸»è¦é¢æ¿*/
+/*Ö÷ÒªÃæ°å*/
 .panel-primary {
   border-color: #5a98de;
 }
@@ -1222,7 +1222,7 @@
   background-color: #5a98de;
   color: #ffffff;
 }
-/*æ¬¡è¦é¢æ¿*/
+/*´ÎÒªÃæ°å*/
 .panel-secondary {
   border-color: #3bb4f2;
 }
@@ -1231,7 +1231,7 @@
   background-color: #3bb4f2;
   color: #ffffff;
 }
-/*æˆåŠŸé¢æ¿*/
+/*³É¹¦Ãæ°å*/
 .panel-success {
   border-color: #5eb95e;
 }
@@ -1240,7 +1240,7 @@
   background-color: #5eb95e;
   color: #ffffff;
 }
-/*è­¦å‘Šé¢æ¿*/
+/*¾¯¸æÃæ°å*/
 .panel-warning {
   border-color: #f37b1d;
 }
@@ -1249,7 +1249,7 @@
   background-color: #f37b1d;
   color: #ffffff;
 }
-/*å±é™©é¢æ¿*/
+/*Î£ÏÕÃæ°å*/
 .panel-danger {
   border-color: #dd514c;
 }
@@ -1317,7 +1317,7 @@
 .layui-elem-quote {
   border-left: 5px solid #00b5f9;
 }
-/*æ¸…æ¥šæµ®åŠ¨*/
+/*Çå³ş¸¡¶¯*/
 .clearfix {
   zoom: 1;
 }
@@ -1460,7 +1460,7 @@
   margin-left: auto;
   margin-right: 2px;
 }
-/*3.6.3 å¤´åƒ
+/*3.6.3 Í·Ïñ
     Name:           mod_avatar
     Example:        <i class="avatar avatar-L radius"><img src="static/h-ui/images/ucenter/avatar-default.jpg"></i>
 */
@@ -1495,7 +1495,7 @@
   width: 32px;
   height: 32px;
 }
-/*é»˜è®¤ä¸ºä¸­ï¼Œå¯ä»¥ä¸å†™ï¼Œå¯ä»¥ç†è§£ä¸ºï¼šå‡ç */
+/*Ä¬ÈÏÎªÖĞ£¬¿ÉÒÔ²»Ğ´£¬¿ÉÒÔÀí½âÎª£º¾ùÂë*/
 .avatar.size-L,
 .avatar.size-L img {
   width: 40px;

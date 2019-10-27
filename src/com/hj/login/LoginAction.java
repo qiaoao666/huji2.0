@@ -1,10 +1,13 @@
 package com.hj.login;
 
+
+import java.util.UUID;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.hj.user.dao.UserDao;
 import com.hj.user.po.UserInfo;
 import com.hj.user.service.UserService;
 import com.hj.user.service.impl.UserServiceImpl;
@@ -13,13 +16,23 @@ import com.hj.user.service.impl.UserServiceImpl;
 @RequestMapping("/login")
 public class LoginAction {
 	private UserService userService = new UserServiceImpl();
-	@RequestMapping("/main")
+	@RequestMapping(value = "/main")
+	@ResponseBody
 	public String getMain(@ModelAttribute UserInfo user){
-		if(userService.addUser(user)){
-			UserDao u = new UserDao();
-			u.addUser(user);
+		boolean bo = false;
+		if(user != null){
+			String userName = user.getUserName();
+			String userPass = user.getUserPass();
+			bo = chechLogin(user);
+			
 		}
-		return "/jsp/main";
+		return "失败";
 	}
-
+	private boolean chechLogin(UserInfo user) {
+		boolean bo = false;
+		
+		return bo;
+	}
+	
+	
 }

@@ -11,6 +11,9 @@
 		<result property="userName" column="user_name" />
 		<result property="userPass" column="user_pass" />
 	</resultMap>
+	<select id="getUserInfo" parameterType="UserInfo">
+		select * from cf_user where userName = #{userName} and userPass = #{userPass}
+	</select>
 </mapper>
 
 <!-- 

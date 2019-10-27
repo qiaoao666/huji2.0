@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
     <title>login</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
     	function login(){
     		var userName = document.getElementById("userName").value;
@@ -20,7 +21,23 @@
     			alert("请输入密码");
     			return;
     		}
-    		window.location.href = "login/main";
+    		$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: 'login/main',
+				data: {"userName":userName,"userPass":userPass},
+				success: function (result) {
+					debugger;
+					console.log(result);//在控制台输出
+					alert(result);
+					//window.location.href = "login/main";
+				},
+				error:function (result) {
+					debugger;
+					alert("登录失败！");
+				}
+			});
+    		
     	}
     </script>
   </head>
