@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginAction {
 	@RequestMapping("/main")
 	public String getMain(){
-		return "/main";
+		System.out.println("乔澳");
+		return "/jsp/main";
 	}
-	
 }
