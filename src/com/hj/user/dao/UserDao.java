@@ -3,33 +3,48 @@ package com.hj.user.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.junit.Test;
 
 import com.hj.base.util.SqlGetSessionUtil;
 import com.hj.user.po.UserInfo;
 
 public class UserDao {
-	public void addUser(UserInfo user) {
+	//注册用户
+	
+	public void addUser() {
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		try {
 			String statement = "com.hj.user.dao.UserDao"+".addUser";
-			int insert = session.insert(statement,user);
+			int insert = session.insert(statement,new UserInfo("1","1","1"));
 			session.commit();
 			System.out.println(insert);
 		}finally {
 			session.close();
 		}
 	}
-	
-	public List<UserInfo> getUserInfo(UserInfo user){
+	@Test
+	public List<UserInfo> getAllUserInfo(){
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
-		try {
-			String statement = "com.hj.user.dao.UserDao"+".getUserInfo";
-//			int insert = session.select(statement,user);
-			session.commit();
-//			System.out.println(insert);
-			return null;
-		}finally {
-			session.close();
-		}
+		String statement = "com.hj.user.dao.UserDao"+".getAllUser";
+		List<UserInfo> list = session.selectList(statement);
+		//UserInfo u = list.indexOf(3);
+		/*for(int i=0;i<list.size();i++){
+			String n = 
+			list.get(i).getUserName();
+			System.out.println(n);
+		}*/
+		//System.out.println(list);
+		session.close();
+		return list;
 	}
+/*	@Test
+	public void getUserInfo(){
+		SqlSession session = SqlGetSessionUtil.getSqlSession();
+		String statement = "com.hj.user.dao.UserDao"+".getUser";
+		UserInfo u = new UserInfo();
+		u = session.selectOne(statement, "1");
+//		UserInfo u = list.indexOf(3);
+		System.out.println(u);
+		session.close();
+	}*/
 }
