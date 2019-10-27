@@ -11,13 +11,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>Insert title here</title>
 </head>
 <frameset rows="15%,*" cols="*" frameborder="0" framespacing="0">
-	<frame src="top/top.jsp" name="top">
-	</frame>
+	<frame src="../jsp/top/top.jsp" name="top">
 	<frameset cols="15%,*" rows="*" frameborder="0">
-		<frame src="left/left.jsp" name="left">
-		</frame>
-		<frame src="right/welcome.jsp" name="right">
-		</frame>
+		<frame src="../jsp/left/left.jsp" name="left">
+		<frame src="../jsp/right/welcome.jsp" name="right">
 	</frameset>
 </frameset>
 </html>

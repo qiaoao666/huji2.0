@@ -12,13 +12,10 @@ import com.hj.user.service.impl.UserServiceImpl;
 @Controller
 @RequestMapping("/user")
 public class UserAction {
-	private UserService userService = new UserServiceImpl();
+
 	@RequestMapping("/addUser")
-	public String addUser(@ModelAttribute UserInfo user){
-		if(userService.addUser(user)){
-			UserDao u = new UserDao();
-			u.addUser();
-		}
+	public String addUser(){
+		
 		return "/user/MyJsp";
 	}
 	

@@ -8,11 +8,11 @@ import com.hj.user.po.UserInfo;
 
 public class UserDao {
 	@Test
-	public void addUser() {
+	public void addUser(UserInfo user) {
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		try {
 			String statement = "com.hj.user.dao.UserDao"+".addUser";
-			int insert = session.insert(statement,new UserInfo("4352","45","545"));
+			int insert = session.insert(statement,user);
 			session.commit();
 			System.out.println(insert);
 		}finally {

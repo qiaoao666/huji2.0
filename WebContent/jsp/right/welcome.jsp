@@ -12,7 +12,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 	<h2>欢迎来到户籍管理系统</h2>
-	<p>如果您已有账号，请<a href="./login.jsp">登录</a></p>
-	<p>如果您没有账号，请先去注册<a href="./register.jsp">注册</a></p>
 </body>
 </html>
