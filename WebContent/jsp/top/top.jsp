@@ -16,7 +16,7 @@
 			<area shape="rect" coords="767,80,900,112"
 				href="../right/modifyPass.jsp" target="right" alt="">
 			<area shape="rect" coords="901,75,1004,110"
-				href="../right/welcome.jsp" target="right" alt="">
+				href="../../index.jsp" target="_parent" alt="">
 		</map>
 	</div>
 </body>

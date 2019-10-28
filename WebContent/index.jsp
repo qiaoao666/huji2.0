@@ -34,7 +34,7 @@
 				if(result=="用户名或密码错误"){
 					alert(result);
 				}else{
-					window.open(result,target="_selt");
+					window.open(result,target="_parent");
 				}
 				//window.location.href = "login/main";
 			},
