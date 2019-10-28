@@ -28,7 +28,7 @@
          <ul class="layui-nav">
              <li class="layui-nav-item layui-this"><a href="../right/welcome.jsp" target="right">首页</a></li>
              <li class="layui-nav-item"><a href="../../huji/input" target="right">户籍添加</a></li>
-             <li class="layui-nav-item"><a href="../right/hujiManage.jsp" target="right">户籍管理</a></li>
+             <li class="layui-nav-item"><a href="../../huji/query" target="right">户籍管理</a></li>
              <li class="layui-nav-item"><a href="../right/managerAdd.jsp" target="right">管理员添加</a></li>
          </ul>
 	</div>

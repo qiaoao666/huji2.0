@@ -27,7 +27,7 @@ public class HujiDao {
 			session.close();
 		}
 	}
-	public void getAllHujiInfo(){
+	public List<HujiInfo> getAllHujiInfo(){
 		//查询所有记录
 		/*
 		 * 查询操作不需要写session.commit();
@@ -37,7 +37,7 @@ public class HujiDao {
 		List<HujiInfo> list = session.selectList(statement);
 		System.out.println(list);
 		session.close();
-		//return list;
+		return list;
 	}
 	
 	public void updateHujiInfo(){

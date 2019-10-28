@@ -12,11 +12,10 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <title>Insert title here</title>
 <script type="text/javascript">
-	function addHuji(){
+/* 	function addHuji(){
 		String info ="";
 		$.ajax({
 			type: "POST",
-			/* dataType: "json", */
 			url: 'huji/add',
 			data: {"info":info},
 			async:true,
@@ -36,11 +35,12 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 				alert("添加失败");
 			}
 		});
-	}
-
+	}  
+ */
 </script>
 </head>
 <body>
+
 	<form:form action="huji/add" method="post" modelAttribute="huji">
 		<table border=1 style="border-collapse: collapse">
 			<caption>

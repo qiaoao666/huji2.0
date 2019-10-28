@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,6 +11,11 @@
 <link>
 </head>
 <body>
+<%!int num =0; %>
+	<c:if test="${ hujiList.size() == 0}">
+	暂时没有任何户籍信息
+	</c:if>
+	<c:if test="${ hujiList.size() != 0}">
 	<table border="0" cellspacing="0" cellpadding="0"
 		style="width: 100%; padding-left: 3px; padding-right: 3px;">
 		<tr class="titleBar">
@@ -37,23 +43,31 @@
 						<th width="10%">户籍所在地</th>
 						<th width="10%">户籍状态</th>
 					</tr>
-					<tr class="DataRow1">
-						<td>1</td>
-						<td>312</td>
-						<td>312</td>
-						<td>312</td>
-						<td>312</td>
+					<c:forEach items="${hujiList}" var="huji">
+					<tr onmousemove="changeColor(this)" onmouseout="changeColor1(this)">
+						<td>${huji.hujiId }</td>
+						<td>${huji.holderName }</td>
+						<td>${huji.holderPhone }</td>
+						<td>${huji.villageName }</td>
+						<td>${huji.unitNum }</td>
+						<td>${huji.roomNum }</td>
+						<td>${huji.holderNative }</td>
+						<td>${huji.holderStatus }</td>
 					</tr>
-					<tr class="DataRow2">
-						<td>2</td>
-						<td>312</td>
-						<td>312</td>
-						<td>312</td>
-						<td>312</td>
-					</tr>
+					</c:forEach>
+					<%-- <tr>
+						<td colspan="4" align="right">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							共${totalCount }条记录&nbsp;&nbsp;
+							共${totalPage }页&nbsp;&nbsp;
+							第${pageCur }页&nbsp;&nbsp;
+							<c:url var="url_pre" value=""></c:url>
+						</td>
+					</tr> --%>
 				</table>
 			</td>
 		</tr>
 	</table>
+	</c:if>
 </body>
 </html>

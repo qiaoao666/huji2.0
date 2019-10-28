@@ -1,5 +1,7 @@
 package com.hj.huji.action;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,10 +22,15 @@ public class HujiAction {
 		return "/jsp/right/hujiAdd";
 	}
 	@RequestMapping("/add")
-	@ResponseBody
 	public String addHuji(@ModelAttribute HujiInfo huji,Model model){
 		model.addAttribute("huji", huji);
 		hujiService.addHuji(huji);
-		return "http://localhost:8080/huji2.0/jsp/right/welcome.jsp";
+		return "redirect:/huji/query";
+	}
+	@RequestMapping("/query")
+	public String queryHuji(@ModelAttribute HujiInfo huji,Model model){
+		List<HujiInfo> list = hujiService.getAllHujiInfo();
+		model.addAttribute("hujiList", list);
+		return "/jsp/right/hujiManage";
 	}
 }
