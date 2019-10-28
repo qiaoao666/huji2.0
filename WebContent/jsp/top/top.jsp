@@ -5,10 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" href="../../css/top.css" />
+<link rel="stylesheet" href="../../css/common.css" />
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="top">
+	<div class="header">
+		<div class="main">
+			<span
+				style="margin-left: 30px; line-height: 65px; color: white; font-size: 18px;">户籍管理系统</span>
+			<div class="avatar">
+				<a style="color: white;">欢迎XXX</a> <a style="color: white;">修改密码</a>
+				<a style="color: white;">退出</a>
+			</div>
+		</div>
+	</div>
+	<!-- 	<div class="top">
 		<img usemap="#imgMap" src="../../images/top.jpg" alt="">
 		<map name="imgMap">
 			<area shape="rect" coords="695,85,767,109"
@@ -18,6 +29,6 @@
 			<area shape="rect" coords="901,75,1004,110"
 				href="../../index.jsp" target="_parent" alt="">
 		</map>
-	</div>
+	</div> -->
 </body>
 </html>

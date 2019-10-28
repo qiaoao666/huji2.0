@@ -1,0 +1,55 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+.titleBar{
+	height:42px;
+	background:url(../images/catBar.jpg) repeat-x;
+}
+.listTable{
+	width:100%;
+	border-collapse:collapse;
+	table-layout: fixed;
+}
+.listTable tr{
+	height:27px;
+	line-height:27px;
+}
+.listTable tr th{
+	padding:3px 3px;
+	text-align:center;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.listTable tr td{
+	height:21px;
+	text-align:center;
+	border-bottom:1px solid #dfdfdf;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.Header{
+	background: #5696d2;
+	width:100%;
+	line-height:27px;
+	color: white;
+}
+.listTable .DataRow1{
+	height:35px;
+	line-height:35px;
+	background-color:#ffffff;
+	font-family: "微软雅黑";
+	color: black;
+}
+.listTable .DataRow2{
+	height:35px;
+	line-height:35px;
+	background-color:#f1f1f1;
+	font-family: "微软雅黑";
+	color: black;
+}

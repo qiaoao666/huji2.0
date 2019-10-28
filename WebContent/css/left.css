@@ -1,0 +1,31 @@
+/* 头部 */
+.left{
+	background-color: #e9eef1;
+	color: #c2c2c2;
+    width: 100%;
+}
+.layui-nav{
+	padding: 0 8px;
+}
+.layui-nav-item a{
+	line-height: 45px;
+	color: #333;
+	padding: 0 8px;
+}
+
+.layui-this{
+    background-color: rgba(0,0,0,.05);
+}
+.layui-this a{
+	color: #0080ff;
+}
+
+.layui-hover{
+	background-color: rgba(0,0,0,.05);
+	border-left:3px solid #0080ff;
+	color: #ffffff;
+}
+.layui-hover a{
+	color: #ffffff;
+}
+
