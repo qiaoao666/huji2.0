@@ -28,11 +28,14 @@
 				<table border="0" cellpadding="0" cellspacing="0"
 					style="height: 100%; width: 100%;" class="listTable">
 					<tr class="Header">
-						<th width="5%">序号</th>
-						<th width="7%">户籍</th>
-						<th width="14%">户籍</th>
-						<th width="7%">户籍</th>
-						<th width="10%">户籍</th>
+						<th width="5%">户籍编号</th>
+						<th width="7%">户主名</th>
+						<th width="14%">户主电话</th>
+						<th width="7%">小区名</th>
+						<th width="10%">单元号</th>
+						<th width="10%">房间号</th>
+						<th width="10%">户籍所在地</th>
+						<th width="10%">户籍状态</th>
 					</tr>
 					<tr class="DataRow1">
 						<td>1</td>

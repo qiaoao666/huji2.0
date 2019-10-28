@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="header">
+<!-- 	<div class="header">
 		<div class="main">
 			<span
 				style="margin-left: 30px; line-height: 65px; color: white; font-size: 18px;">户籍管理系统</span>
@@ -18,9 +18,9 @@
 				<a style="color: white;">退出</a>
 			</div>
 		</div>
-	</div>
-	<!-- 	<div class="top">
-		<img usemap="#imgMap" src="../../images/top.jpg" alt="">
+	</div> -->
+	<div class="top">
+		<img class="image" usemap="#imgMap" src="../../images/top.jpg" alt="">
 		<map name="imgMap">
 			<area shape="rect" coords="695,85,767,109"
 				href="../right/welcome.jsp" target="right" alt="">
@@ -29,6 +29,6 @@
 			<area shape="rect" coords="901,75,1004,110"
 				href="../../index.jsp" target="_parent" alt="">
 		</map>
-	</div> -->
+	</div>
 </body>
 </html>

@@ -4,21 +4,23 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hj.base.util.SqlGetSessionUtil;
 import com.hj.base.util.WebUtil;
 import com.hj.huji.po.HujiInfo;
+import com.hj.huji.service.HujiService;
 import com.hj.user.po.UserInfo;
 
 public class HujiDao {
-	
-	public void addUser() {
+	public void addHuji(HujiInfo huji) {
 		//插入
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		try {
 			String statement = "com.hj.huji.dao.HujiDao"+".addHuji";
 			String hujiId = WebUtil.getUUID();
-			int insert = session.insert(statement,new HujiInfo(hujiId,"43","54","64576","4543","0","768","0"));
+			huji.setHujiId(hujiId);
+			int insert = session.insert(statement,huji);
 			session.commit();
 			//System.out.println(insert);
 		}finally {

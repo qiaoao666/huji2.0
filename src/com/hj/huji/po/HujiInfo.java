@@ -7,7 +7,7 @@ public class HujiInfo {
 	private String villageName;//小区名
 	private String unitNum;//单元号
 	private String roomNum;//房间号
-	private String holderNative;//户主籍贯
+	private String holderNative;//户籍坐在地
 	private String holderStatus;//户籍状态
 	
 	public HujiInfo(String hujiId, String holderName, String holderPhone,

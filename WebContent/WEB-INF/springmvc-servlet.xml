@@ -11,9 +11,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc 
         http://www.springframework.org/schema/mvc/spring-mvc.xsd"> 
-    <!-- 使用扫描机制，扫描controller包 -->
-    <context:component-scan base-package="com.hj.user.action"/>
-    <context:component-scan base-package="com.hj.login"/>
+    <!-- 使用扫描机制，扫描这个大的controller包 -->
+    <context:component-scan base-package="com.hj"/>
+   <!--  <context:component-scan base-package="com.hj.huji.action"/> -->
     <!-- 允许css目录下所有文件可见 -->
     <!-- <mvc:resources location="/css/" mapping="/css/**"></mvc:resources>  -->
     <!-- 允许html目录下所有文件可见 -->
@@ -23,9 +23,9 @@
   	<!-- 配置视图解析器 -->
   	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
             id="internalResourceViewResolver">
-<!--         前缀
-       <property name="prefix" value="/WEB-INF/jsp/" /> -->
+		<!-- 前缀 -->
+     <!-- 	<property name="prefix" value="/WEB-INF/jsp/" /> -->
        <!-- 后缀 -->
-       <property name="suffix" value=".jsp" />
+       <property name="suffix" value=".jsp" /> 
   </bean>
 </beans>

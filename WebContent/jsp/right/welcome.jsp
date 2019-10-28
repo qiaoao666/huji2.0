@@ -12,5 +12,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 	<h2>欢迎来到户籍管理系统</h2>
+<!-- 	<a href="../../huji/qwe">点我测试</a> -->
 </body>
 </html>
