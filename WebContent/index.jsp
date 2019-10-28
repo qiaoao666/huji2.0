@@ -29,7 +29,13 @@
 			async:true,
 			success: function (result) {
 				//console.log(result);//在控制台输出
-				alert(decodeURIComponent(result));
+				//alert(decodeURIComponent(result));
+				result = decodeURIComponent(result);
+				if(result=="用户名或密码错误"){
+					alert(result);
+				}else{
+					window.open(result,target="_selt");
+				}
 				//window.location.href = "login/main";
 			},
 			error:function (result) {

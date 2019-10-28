@@ -23,9 +23,9 @@ public class UserAction {
 			String userName = user.getUserName();
 			//userName = new String(userName.getBytes("ISO-8859-1"), "UTF-8");
 			String userPass = user.getUserPass();
-			System.out.println(userName);
+			//System.out.println(userName);
 			if(userService.loginCheck(userName, userPass)){
-				return "success";
+				return "http://localhost:8080/huji2.0/jsp/main.jsp";
 			}
 		}
 		return URLEncoder.encode("用户名或密码错误", "UTF-8");
