@@ -10,19 +10,19 @@ import com.hj.user.po.UserInfo;
 
 public class UserDao {
 	//注册用户
-	
+	@Test
 	public void addUser() {
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		try {
 			String statement = "com.hj.user.dao.UserDao"+".addUser";
-			int insert = session.insert(statement,new UserInfo("1","1","1"));
+			int insert = session.insert(statement,new UserInfo("4","23","23"));
 			session.commit();
-			System.out.println(insert);
+			//System.out.println(insert);
 		}finally {
 			session.close();
 		}
 	}
-	@Test
+
 	public List<UserInfo> getAllUserInfo(){
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		String statement = "com.hj.user.dao.UserDao"+".getAllUser";

@@ -1,9 +1,6 @@
 package com.hj.user.service.impl;
 
 import java.util.List;
-
-import org.junit.Test;
-
 import com.hj.user.dao.UserDao;
 import com.hj.user.po.UserInfo;
 import com.hj.user.service.UserService;

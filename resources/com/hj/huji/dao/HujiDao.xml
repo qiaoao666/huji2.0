@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hj.user.dao.UserDao">
-	<insert id="addUser" parameterType="UserInfo" >
-		insert into cf_user (user_id,user_name,user_pass)
-		values(#{userId},#{userName},#{userPass});
+<mapper namespace="com.hj.huji.dao.HujiDao">
+	<!-- 插入记录不需要用到resultMap -->
+	<insert id="addHuji" parameterType="HujiInfo">
+		insert into cf_huji (huji_id,holder_name,holder_phone,
+		village_name,unit_num,room_num,holder_native,holder_status)
+		values(#{hujiId},#{holderName},#{holderPhone},#{villageName},
+		#{unitNum},#{roomNum},#{holderNative},#{holderStatus});
 	</insert>
-	<select id="getAllUser" parameterType="UserInfo" resultMap="userResultMap">
+	<select id="getAllHuji" parameterType="HujiInfo" resultMap="hujiResultMap">
 		select * from cf_user;
 	</select>
-	<resultMap id="userResultMap" type="UserInfo">
-		<id property="userId" column="user_id" />
-		<result property="userName" column="user_name" />
-		<result property="userPass" column="user_pass" />
+		<resultMap id="hujiResultMap" type="HujiInfo">
+		<id property="hujiId" column="huji_id" />
+		<result property="holderName" column="holder_name" />
+		<result property="holderPhone" column="holder_phone" />
+		<result property="villageName" column="village_name" />
+		<result property="unitNum" column="unit_num" />
+		<result property="roomNum" column="room_num" />
+		<result property="holderNative" column="holder_native" />
+		<result property="holderStatus" column="holder_status" />
 	</resultMap>
 <!-- 	<select id="getUser" parameterType="int" resultMap="userMap">
 		select * from cf_user where user_name=#{userName};
