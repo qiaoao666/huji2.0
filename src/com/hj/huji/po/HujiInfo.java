@@ -26,6 +26,14 @@ public class HujiInfo {
 	public HujiInfo() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "HujiInfo [hujiId=" + hujiId + ", holderName=" + holderName
+				+ ", holderPhone=" + holderPhone + ", villageName="
+				+ villageName + ", unitNum=" + unitNum + ", roomNum=" + roomNum
+				+ ", holderNative=" + holderNative + ", holderStatus="
+				+ holderStatus + "]";
+	}
 	public String getHujiId() {
 		return hujiId;
 	}
