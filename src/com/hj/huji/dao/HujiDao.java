@@ -50,12 +50,12 @@ public class HujiDao {
 		session.close();
 	}
 	@Test
-	public void deleteHujiInfo(){
+	public void deleteHujiInfo(String id){
 		//删除户籍信息
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		String statement = "com.hj.huji.dao.HujiDao"+".deleteHuji";
-		int delete = session.delete(statement, 133);
-		System.out.println(delete);
+		int delete = session.delete(statement, id);
+		//System.out.println(delete);
 		session.commit();
 		session.close();
 	}

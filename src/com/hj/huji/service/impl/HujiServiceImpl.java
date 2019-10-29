@@ -21,11 +21,6 @@ public class HujiServiceImpl implements HujiService{
 	}
 
 	@Override
-	public void deleteHuji(HujiInfo huji) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
 	public void updateHuji(HujiInfo huji) {
 		// TODO Auto-generated method stub
 		
@@ -36,6 +31,12 @@ public class HujiServiceImpl implements HujiService{
 		// TODO Auto-generated method stub
 		List<HujiInfo> list = hujiDao.getAllHujiInfo();
 		return list;
+	}
+
+	@Override
+	public void deleteHuji(String id) {
+		// TODO Auto-generated method stub
+		hujiDao.deleteHujiInfo(id);
 	}
 
 }

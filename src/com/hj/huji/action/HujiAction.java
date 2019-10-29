@@ -33,4 +33,11 @@ public class HujiAction {
 		model.addAttribute("hujiList", list);
 		return "/jsp/right/hujiManage";
 	}
+	@RequestMapping("/drop")
+	public String dropHuji(String id,Model model){
+		hujiService.deleteHuji(id);
+		List<HujiInfo> list = hujiService.getAllHujiInfo();
+		model.addAttribute("hujiList", list);
+		return "/jsp/right/hujiManage";
+	}
 }

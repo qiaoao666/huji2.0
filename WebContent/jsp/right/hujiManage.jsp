@@ -11,7 +11,8 @@
 <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function dropHuji(id){
-		$("."+id).remove();
+		$("."+id).remove();//实现快速响应，但避免不了页面刷新
+		window.location.href = "../huji/drop?id="+id;
 	}
 </script>
 </head>
@@ -50,7 +51,7 @@
 						<th width="10%">操作</th>
 					</tr>
 					<c:forEach items="${hujiList}" var="huji">
-					<tr class="<%=++i %>>" >
+					<tr class=" ${huji.hujiId }" >
 						<td>${huji.hujiId }</td>
 						<td>${huji.holderName }</td>
 						<td>${huji.holderPhone }</td>
@@ -59,7 +60,7 @@
 						<td>${huji.roomNum }</td>
 						<td>${huji.holderNative }</td>
 						<td>${huji.holderStatus }</td>
-						<td><button onclick="dropHuji(<%=i %>)" >删除</button></td>
+						<td><button onclick="dropHuji('${huji.hujiId }')" >删除</button></td>
 					</tr>
 					</c:forEach>
 					<%-- <tr>
