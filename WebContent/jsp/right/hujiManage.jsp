@@ -6,12 +6,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../../css/table.css" />
-<link rel="stylesheet" href="../../css/button.css" />
-<link>
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/button.css" />
+<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	function dropHuji(id){
+		$("."+id).remove();
+	}
+</script>
 </head>
 <body>
-<%!int num =0; %>
+<%!int i =0; %>
 	<c:if test="${ hujiList.size() == 0}">
 	暂时没有任何户籍信息
 	</c:if>
@@ -36,15 +41,16 @@
 					<tr class="Header">
 						<th width="5%">户籍编号</th>
 						<th width="7%">户主名</th>
-						<th width="14%">户主电话</th>
+						<th width="10%">户主电话</th>
 						<th width="7%">小区名</th>
-						<th width="10%">单元号</th>
-						<th width="10%">房间号</th>
+						<th width="5%">单元号</th>
+						<th width="5%">房间号</th>
 						<th width="10%">户籍所在地</th>
-						<th width="10%">户籍状态</th>
+						<th width="5%">户籍状态</th>
+						<th width="10%">操作</th>
 					</tr>
 					<c:forEach items="${hujiList}" var="huji">
-					<tr onmousemove="changeColor(this)" onmouseout="changeColor1(this)">
+					<tr class="<%=++i %>>" >
 						<td>${huji.hujiId }</td>
 						<td>${huji.holderName }</td>
 						<td>${huji.holderPhone }</td>
@@ -53,6 +59,7 @@
 						<td>${huji.roomNum }</td>
 						<td>${huji.holderNative }</td>
 						<td>${huji.holderStatus }</td>
+						<td><button onclick="dropHuji(<%=i %>)" >删除</button></td>
 					</tr>
 					</c:forEach>
 					<%-- <tr>

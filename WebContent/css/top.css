@@ -2,7 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 }
-.top{
+ .top{
 	width: 100%;
 	height: 120px;
 	background-repeat: no-repeat;
@@ -18,9 +18,9 @@
 .header{
     width: 100%;
     height: 65px;
-    backgroundcolor: rgb(59, 140, 255);
+    background-color: rgb(59, 140, 255);
 }
 .image{
 	width:1600px;
 	
-}
+} 

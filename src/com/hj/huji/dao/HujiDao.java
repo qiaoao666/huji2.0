@@ -35,7 +35,7 @@ public class HujiDao {
 		SqlSession session = SqlGetSessionUtil.getSqlSession();
 		String statement = "com.hj.huji.dao.HujiDao"+".getAllHuji";
 		List<HujiInfo> list = session.selectList(statement);
-		System.out.println(list);
+		//System.out.println(list);
 		session.close();
 		return list;
 	}
