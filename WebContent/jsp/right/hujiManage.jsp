@@ -11,7 +11,7 @@
 <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function dropHuji(id){
-		$("."+id).remove();//实现快速响应，但避免不了页面刷新
+		$("."+id).remove();//实现快速响应，但无法避免页面刷新，很鸡肋
 		window.location.href = "../huji/drop?id="+id;
 	}
 </script>
@@ -40,7 +40,7 @@
 				<table border="0" cellpadding="0" cellspacing="0"
 					style="height: 100%; width: 100%;" class="listTable">
 					<tr class="Header">
-						<th width="5%">户籍编号</th>
+						<th width="5%">序号</th>
 						<th width="7%">户主名</th>
 						<th width="10%">户主电话</th>
 						<th width="7%">小区名</th>
@@ -52,7 +52,7 @@
 					</tr>
 					<c:forEach items="${hujiList}" var="huji">
 					<tr class=" ${huji.hujiId }" >
-						<td>${huji.hujiId }</td>
+						<td>${huji.orderNum }</td>
 						<td>${huji.holderName }</td>
 						<td>${huji.holderPhone }</td>
 						<td>${huji.villageName }</td>

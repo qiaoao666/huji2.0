@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hj.huji.po.HujiInfo;
 import com.hj.huji.service.HujiService;
@@ -36,6 +35,7 @@ public class HujiAction {
 	@RequestMapping("/drop")
 	public String dropHuji(String id,Model model){
 		hujiService.deleteHuji(id);
+		//System.out.println("删除！");
 		List<HujiInfo> list = hujiService.getAllHujiInfo();
 		model.addAttribute("hujiList", list);
 		return "/jsp/right/hujiManage";

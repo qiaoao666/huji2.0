@@ -9,10 +9,10 @@ public class HujiInfo {
 	private String roomNum;//房间号
 	private String holderNative;//户籍坐在地
 	private String holderStatus;//户籍状态
-	
+	private int orderNum;//排序
 	public HujiInfo(String hujiId, String holderName, String holderPhone,
 			String villageName, String unitNum, String roomNum,
-			String holderNative, String holderStatus) {
+			String holderNative, String holderStatus, int orderNum) {
 		super();
 		this.hujiId = hujiId;
 		this.holderName = holderName;
@@ -22,17 +22,25 @@ public class HujiInfo {
 		this.roomNum = roomNum;
 		this.holderNative = holderNative;
 		this.holderStatus = holderStatus;
+		this.orderNum = orderNum;
+	}
+	public int getOrderNum() {
+		return orderNum;
+	}
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
 	}
 	public HujiInfo() {
 		super();
 	}
+
 	@Override
 	public String toString() {
 		return "HujiInfo [hujiId=" + hujiId + ", holderName=" + holderName
 				+ ", holderPhone=" + holderPhone + ", villageName="
 				+ villageName + ", unitNum=" + unitNum + ", roomNum=" + roomNum
 				+ ", holderNative=" + holderNative + ", holderStatus="
-				+ holderStatus + "]";
+				+ holderStatus + ", orderNum=" + orderNum + "]";
 	}
 	public String getHujiId() {
 		return hujiId;

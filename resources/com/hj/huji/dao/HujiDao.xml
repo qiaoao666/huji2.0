@@ -5,13 +5,17 @@
 	<!-- 插入记录不需要用到resultMap -->
 	<insert id="addHuji" parameterType="HujiInfo">
 		insert into cf_huji (huji_id,holder_name,holder_phone,
-		village_name,unit_num,room_num,holder_native,holder_status)
+		village_name,unit_num,room_num,holder_native,holder_status,order_num)
 		values(#{hujiId},#{holderName},#{holderPhone},#{villageName},
-		#{unitNum},#{roomNum},#{holderNative},#{holderStatus});
+		#{unitNum},#{roomNum},#{holderNative},#{holderStatus},#{orderNum});
 	</insert>
 	<!-- 查询全部户籍信息 -->
 	<select id="getAllHuji" parameterType="HujiInfo" resultMap="hujiResultMap">
-		select * from cf_huji;
+		select * from cf_huji order by order_num;
+	</select>
+	<!-- 查询单条户籍信息 -->
+	<select id="getHuji" parameterType="String" resultMap="hujiResultMap">
+		select * from cf_huji where huji_id=#{hujiId};
 	</select>
 		<resultMap id="hujiResultMap" type="HujiInfo">
 		<id property="hujiId" column="huji_id" />
@@ -22,6 +26,7 @@
 		<result property="roomNum" column="room_num" />
 		<result property="holderNative" column="holder_native" />
 		<result property="holderStatus" column="holder_status" />
+		<result property="orderNum" column="order_num" />
 	</resultMap>
 	<!-- 修改户籍信息 -->
 	<update id="updateHuji" parameterType="HujiInfo">
@@ -29,7 +34,7 @@
 		holder_name=#{holderName},holder_phone=#{holderPhone},
 		village_name=#{villageName},unit_num=#{unitNum},
 		room_num=#{roomNum},holder_native=#{holderNative},
-		holder_status=#{holderStatus} 
+		holder_status=#{holderStatus},order_num=#{orderNum}
 		where huji_id=#{hujiId}
 	</update>
 	<!-- 删除户籍信息 -->
