@@ -13,8 +13,8 @@
 			<span
 				style="margin-left: 30px; line-height: 65px; color: white; font-size: 18px;">户籍管理系统</span>
 			<div class="avatar">
-				<a style="color: white;">欢迎XXX</a> <a style="color: white;">修改密码</a>
-				<a style="color: white;">退出</a>
+				<a style="color: white;">欢迎${user.userName }</a> <a href="../right/modifyPass.jsp" target="right" style="color: white;">修改密码</a>
+				<a href="../../index.jsp" target="_parent"  style="color: white;">退出</a>
 			</div>
 		</div>
 	</div>
